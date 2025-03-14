@@ -55,7 +55,8 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Rubik-Regular", "Arial", sans-serif;
+  overflow-x: hidden;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
   line-height: 36px;
   letter-spacing: 0.15px;
@@ -123,7 +124,7 @@ select:-webkit-autofill:focus {
   padding: 8px 22px;
   border-radius: 5px;
   border: 2px solid transparent;
-  font-size: 14px;
+   font-size: 14px;
   line-height: 28px;
   font-weight: 500;
   text-decoration: none;
@@ -148,6 +149,24 @@ select:-webkit-autofill:focus {
   font-size: 13px;
   line-height: 17px;
   letter-spacing: 1.5px;
+}
+.button--blue {
+  background-color: var(--global-blue);
+  color: #fff;
+}
+.button--blue:hover {
+  border-color: var(--global-blue);
+  color: var(--global-blue);
+  background-color: #fff;
+}
+.button--grey {
+  background-color: #F7F7F7;
+  color: var(--text-color);
+}
+.button--grey:hover {
+  border-color: #5B6074;
+  color: #5B6074;
+  background-color: #fff;
 }
 
 /* LOGO */
@@ -216,7 +235,54 @@ select:-webkit-autofill:focus {
   margin-right: 48px;
 }
 
-
+/* HERO */
+.hero {
+  padding-top: 66px;
+  padding-bottom: 105px;
+  background-color: #fff;
+  background-image: url("../img/blue-pill-bg.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 705px)  200px;
+}
+.hero__container {
+  display: flex;
+  align-items: flex-start;
+}
+.hero__content {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 540px;
+  padding-top: 66px;
+  margin-right: 65px;
+}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 52px;
+  color: var(--text-color);
+}
+.hero__description {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color-50);
+}
+.hero__actions {
+  display: flex;
+}
+.hero__actions-item:not(:last-child) {
+  margin-right: 16px;
+}
+.hero__img {
+  flex-shrink: 0;
+  width: 578px;
+  height: 385px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
