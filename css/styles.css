@@ -374,17 +374,17 @@ select:-webkit-autofill:focus {
   opacity: 0.6;
 }
 
-.tabs-panels {
+.tabs__panels {
   padding-top: 75px;
   padding-bottom: 165px;
   background-image: url('../img/blue-pill-bg.svg');
   background-repeat: no-repeat;
   background-position: calc(50% - 665px) 156px;
 }
-.tabs-panel {
+.tabs__panel {
   display: none;
 }
-.tab__panel--active {
+.tabs__panel--active {
   display: block;
 }
 
