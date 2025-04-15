@@ -207,6 +207,9 @@ select:-webkit-autofill:focus {
   text-decoration: none;
   color: var(--text-color);
 }
+.sitenav--white .sitenav__link {
+  color: #fff;
+}
 .sitenav__link:hover {
   color: var(--red);
 }
@@ -412,6 +415,101 @@ select:-webkit-autofill:focus {
   margin-bottom: 44px;
 }
 
+/* Accordion */
+.accordion {
+  border-top: 1px solid rgba(36, 42, 69, 0.15);
+}
+.accordion__item {
+  border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+}
+.accordion__item-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 13px;
+  padding-right: 25px;
+}
+.accordion__item-title {
+  flex-grow: 1;
+  margin: 0;
+  margin-right: 24px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.accordion__item-header:hover .accordion__item-title {
+  color: var(--red);
+}
+.accordion__item-toggler {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.accordion__item-toggler:focus {
+  outline: none;
+}
+.accordion__item-toggler::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.accordion__item-toggler:focus::before {
+  outline: auto;
+}
+.accordion__item-toggler-icon {
+  display: block;
+  width: 20px;
+  height: 13px;
+  color: var(--global-blue);
+}
+.accordion__item--open .accordion__item-toggler-icon {
+  transform: rotate(180deg);
+  color: var(--red);
+}
+.accordion__item-content {
+  display: none;
+  padding-top: 19px;
+  padding-bottom: 29px;
+  color: var(--text-color-75);
+}
+.accordion__item--open .accordion__item-content {
+  display: block;
+}
+.accordion__item-text {
+  margin: 0;
+}
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  align-items: center;
+  padding: 0;
+   margin: 0;
+  list-style: none;
+
+}
+.socials__item:not(:last-child) {
+  margin-right: 40px;
+}
+.socials__link {
+  display: flex;
+  color: #fff;
+}
+.socials__link:hover {
+  color: var(--red);
+}
+.socials__link:active {
+  opacity: 0.6;
+}
+.socials__icon {
+
+}
 /* Extension */
 .extension__inner {
   max-width: 910px;
@@ -501,75 +599,6 @@ select:-webkit-autofill:focus {
   margin-bottom: 54px;
 }
 
-/* Accordion */
-.accordion {
-  border-top: 1px solid rgba(36, 42, 69, 0.15);
-}
-.accordion__item {
-  border-bottom: 1px solid rgba(36, 42, 69, 0.15);
-}
-.accordion__item-header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-  padding-bottom: 13px;
-  padding-right: 25px;
-}
-.accordion__item-title {
-  flex-grow: 1;
-  margin: 0;
-  margin-right: 24px;
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 400;
-  color: var(--text-color);
-}
-.accordion__item-header:hover .accordion__item-title {
-  color: var(--red);
-}
-.accordion__item-toggler {
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-}
-.accordion__item-toggler:focus {
-  outline: none;
-}
-.accordion__item-toggler::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-}
-.accordion__item-toggler:focus::before {
-  outline: auto;
-}
-.accordion__item-toggler-icon {
-  display: block;
-  width: 20px;
-  height: 13px;
-  color: var(--global-blue);
-}
-.accordion__item--open .accordion__item-toggler-icon {
-  transform: rotate(180deg);
-  color: var(--red);
-}
-.accordion__item-content {
-  display: none;
-  padding-top: 19px;
-  padding-bottom: 29px;
-  color: var(--text-color-75);
-}
-.accordion__item--open .accordion__item-content {
-  display: block;
-}
-.accordion__item-text {
-  margin: 0;
-}
 
 /* SUBSCRIPTION */
 .subscription {
@@ -656,6 +685,31 @@ select:-webkit-autofill:focus {
  .subscription__field:placeholder-shown + .validation-error {
    display: none;
  }
+
+ /* SITE-FOOTER */
+ .site-footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--text-color);
+  color: #fff;
+}
+.site-footer__container {
+  display: flex;
+  align-items: center;
+}
+.site-footer__logo {
+  margin-right: 63px;
+}
+.site-footer__sitenav {
+  margin-right: auto;
+}
+.sitenav {
+}
+.sitenav--white {
+
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
